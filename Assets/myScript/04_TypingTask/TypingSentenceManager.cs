@@ -19,15 +19,10 @@ public class TypingSentenceManager : MonoBehaviour
 
     public List<string> sentences = new List<string>() {
         "my watch fell in the water",
-        "prevailing wind from the east",
-        "never too rich and never too thin",
         "breathing is difficult",
-        "physics and chemistry are hard",
         "my bank account is overdrawn",
-        "elections bring out the best",
         "we are having spaghetti",
-        "time to go shopping",
-        "a problem with the engine"
+        "time to go shopping"
     };
 
     public int index = 1;

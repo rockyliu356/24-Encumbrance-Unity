@@ -299,7 +299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2859147190401906338, guid: bf018bf093319f840a7314cb25167d8c, type: 3}
       propertyPath: m_text
-      value: 'Please wear the ankle weight and redo the tasks. '
+      value: 'This is the end of the first scenario. Please notify the admin. '
       objectReference: {fileID: 0}
     - target: {fileID: 2859147190401906339, guid: bf018bf093319f840a7314cb25167d8c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -487,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2859147191208444807, guid: bf018bf093319f840a7314cb25167d8c, type: 3}
       propertyPath: m_text
-      value: New Scenario
+      value: 'Congratulations! '
       objectReference: {fileID: 0}
     - target: {fileID: 2859147191209390392, guid: bf018bf093319f840a7314cb25167d8c, type: 3}
       propertyPath: m_IsActive
@@ -2288,7 +2288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7344442272471124583, guid: 0a556b6ffc6b64ac8a1ceea70335b1b1, type: 3}
       propertyPath: m_text
-      value: Next Task
+      value: End
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

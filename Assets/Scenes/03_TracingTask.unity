@@ -3237,13 +3237,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.XAxis.AxisRange.Max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.XAxis.AxisRange.Min
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.YAxis.AxisRange.Max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.YAxis.AxisRange.Min
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6338683005842148826, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.235
+      value: 0.242
       objectReference: {fileID: 0}
     - target: {fileID: 6338683005842148826, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.258
+      value: -0.233
       objectReference: {fileID: 0}
     - target: {fileID: 7549955841211995357, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: ball
@@ -4208,6 +4224,22 @@ PrefabInstance:
     - target: {fileID: 1812391437710465083, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.XAxis.AxisRange.Max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.XAxis.AxisRange.Min
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.YAxis.AxisRange.Max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.YAxis.AxisRange.Min
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6338683005842148826, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6020,6 +6052,22 @@ PrefabInstance:
     - target: {fileID: 1812391437710465083, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.XAxis.AxisRange.Max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.XAxis.AxisRange.Min
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.YAxis.AxisRange.Max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.YAxis.AxisRange.Min
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7549955841211995357, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: ball

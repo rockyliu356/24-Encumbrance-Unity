@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Encumbrance MR Tasks.sln"
+    "dotnet.defaultSolution": "24-Encumbrance-Unity.sln"
 }
