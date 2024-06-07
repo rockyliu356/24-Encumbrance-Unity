@@ -1665,6 +1665,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8988278374813970409, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
+      propertyPath: _positionConstraints.XAxis.AxisRange.Max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988278374813970409, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
+      propertyPath: _positionConstraints.XAxis.AxisRange.Min
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988278374813970409, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
+      propertyPath: _positionConstraints.YAxis.AxisRange.Max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988278374813970409, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
+      propertyPath: _positionConstraints.YAxis.AxisRange.Min
+      value: -0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8319,6 +8335,22 @@ PrefabInstance:
     - target: {fileID: 1812391437710465083, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.XAxis.AxisRange.Max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.XAxis.AxisRange.Min
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.YAxis.AxisRange.Max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458461553764095794, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: _positionConstraints.YAxis.AxisRange.Min
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7549955841211995357, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: ball
