@@ -10,6 +10,8 @@ public class RayTask : MonoBehaviour
 {
     [SerializeField] private List<GameObject> buttons;
     [SerializeField] private GameObject nextDialog;
+    [SerializeField] private GameObject leftController;
+    [SerializeField] private GameObject rightController;
     public static Vector3 centerLocation;
     public static Vector3 fingerLocation;
 
@@ -125,6 +127,8 @@ public class RayTask : MonoBehaviour
                         {
                             buttons[i].SetActive(false);
                         }
+                        leftController.SetActive(false);
+                        rightController.SetActive(false);
                         nextDialog.SetActive(true);
                     }
                 }

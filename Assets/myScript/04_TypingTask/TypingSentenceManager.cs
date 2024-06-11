@@ -78,9 +78,4 @@ public class TypingSentenceManager : MonoBehaviour
         index += 1;
         startButton.SetActive(false);
     }
-
-    public void CheckEnteredKey()
-    {
-
-    }
 }

@@ -105,7 +105,6 @@ public class PointTask : MonoBehaviour
                     // jumpt to next ID
                     if (currentIteration < scales.Count)
                     {
-
                         buttons[0].SetActive(false);
                         setDefaultColour(buttons[0]);
                         buttons[0].SetActive(true);
