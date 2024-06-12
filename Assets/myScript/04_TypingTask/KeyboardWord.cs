@@ -5,12 +5,15 @@ using UnityEngine.UI;
 public class KeyboardWord : MonoBehaviour
 {
     public InputField inputField;
-    public string wordEntered;
+
+    private void Update()
+    {
+        Logger.enteredSentence = inputField.text;
+    }
 
     public void OnKeyClicked(string key)
     {
         inputField.text += key;
-        wordEntered = key;
     }
 
     public void DeleteClicked()

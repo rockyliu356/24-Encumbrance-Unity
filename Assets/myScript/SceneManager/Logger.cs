@@ -21,11 +21,8 @@ public class Logger : MonoBehaviour
     private Vector3 ballLocation;
 
     // variables for 04_TypingTask
-    public TypingSentenceManager typingSentenceManager;
-    private int sentenceID;
-    private string targetSentence;
-    private string enteredSentence;
-    private float typingTime;
+    public static string targetSentence { get; set; }
+    public static string enteredSentence { get; set; }
 
     // global variables
     private bool startRecord;
@@ -51,9 +48,13 @@ public class Logger : MonoBehaviour
         string fname = iterationNumStr + "_" + sceneNumStr + "_" + sceneName + "_" + System.DateTime.Now.ToString("dd-MMM HH-mm-ss") + ".csv";
         logPath = Path.Combine(Application.persistentDataPath, fname);
 
-        if (sceneName == "01_FittsPoke" || sceneName == "02_FittsRay")
+        if (sceneName == "00_Tutorial")
         {
-            allEntries.Add("sceneName,sceneNum,iterationNum,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,clickedTime");
+            allEntries.Add("sceneName,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,shapeName,ballLocationX,ballLocationY,ballLocationZ,targetSentence,enteredSentence,currentTime");
+        }
+        else if (sceneName == "01_FittsPoke" || sceneName == "02_FittsRay")
+        {
+            allEntries.Add("sceneName,sceneNum,iterationNum,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,currentTime");
         }
         else if (sceneName == "03_TracingTask")
         {
@@ -61,7 +62,7 @@ public class Logger : MonoBehaviour
         }
         else if (sceneName == "04_TypingTask_New")
         {
-            allEntries.Add("sceneName,sceneNum,iterationNum,sentenceID,targetSentence,enteredSentence,typingTime");
+            allEntries.Add("sceneName,sceneNum,iterationNum,targetSentence,enteredSentence,currentTime");
         }
     }
 
@@ -69,7 +70,11 @@ public class Logger : MonoBehaviour
     {
         if (startRecord)
         {
-            if (sceneName == "01_FittsPoke")
+            if (sceneName == "00_Tutorial")
+            {
+                LogTutorial();
+            }
+            else if (sceneName == "01_FittsPoke")
             {
                 if (logButtonActive)
                 {
@@ -91,7 +96,11 @@ public class Logger : MonoBehaviour
             }
             else if (sceneName == "04_TypingTask_New")
             {
-                LogTypingTask();
+                if (logButtonActive)
+                {
+                    LogTypingTask();
+                    LogButtonDeactive();
+                }
             }
         }
     }
@@ -211,23 +220,21 @@ public class Logger : MonoBehaviour
 
     void LogTypingTask()
     {
-        sentenceID = typingSentenceManager.index;
-        targetSentence = typingSentenceManager.sentences[sentenceID - 1];
-        enteredSentence = typingSentenceManager.enteredSentence.text.ToString();
-        typingTime = typingSentenceManager.typingTime;
-
         currentEntry = new string(
             sceneName + "," +
             sceneNumStr + "," +
             iterationNumStr + "," +
-            sentenceID.ToString() + "," +
             targetSentence + "," +
             enteredSentence + "," +
-            typingTime.ToString());
+            GetTimeStamp());
 
         allEntries.Add(currentEntry);
 
         currentEntry = new string("");
     }
 
+    void LogTutorial()
+    {
+
+    }
 }
