@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class SnapZoneCollisionDetector : MonoBehaviour
 {
-    [SerializeField] private GameObject ball;
     [SerializeField] private GameObject currentShape;
     [SerializeField] private GameObject nextShape;
     [SerializeField] private GameObject leftController;
     [SerializeField] private GameObject rightController;
     [SerializeField] private bool endTask;
+    public int index;
+
+    private void Update()
+    {
+        GetBallLocation.index = index;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,15 +35,5 @@ public class SnapZoneCollisionDetector : MonoBehaviour
             leftController.SetActive(false);
             rightController.SetActive(false);
         }
-    }
-
-    public string GetShapeName()
-    {
-        return currentShape.name.ToString();
-    }
-
-    public Vector3 GetBallLocation()
-    {
-        return ball.transform.position;
     }
 }
