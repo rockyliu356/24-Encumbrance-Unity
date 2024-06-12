@@ -4313,6 +4313,14 @@ PrefabInstance:
       propertyPath: nextShape
       value: 
       objectReference: {fileID: 1155995917}
+    - target: {fileID: 7549955841211995357, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: leftController
+      value: 
+      objectReference: {fileID: 1842442528}
+    - target: {fileID: 7549955841211995357, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: rightController
+      value: 
+      objectReference: {fileID: 1842442528}
     - target: {fileID: 8914921102151606149, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5173,6 +5181,14 @@ PrefabInstance:
       propertyPath: nextShape
       value: 
       objectReference: {fileID: 2124923998}
+    - target: {fileID: 6235142300857021181, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
+      propertyPath: leftController
+      value: 
+      objectReference: {fileID: 1334812854}
+    - target: {fileID: 6235142300857021181, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
+      propertyPath: rightController
+      value: 
+      objectReference: {fileID: 1842442528}
     - target: {fileID: 7153779483201585158, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
       propertyPath: m_Name
       value: Line5
@@ -5967,6 +5983,14 @@ PrefabInstance:
       propertyPath: nextShape
       value: 
       objectReference: {fileID: 1769378775}
+    - target: {fileID: 6235142300857021181, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
+      propertyPath: leftController
+      value: 
+      objectReference: {fileID: 1334812854}
+    - target: {fileID: 6235142300857021181, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
+      propertyPath: rightController
+      value: 
+      objectReference: {fileID: 1842442528}
     - target: {fileID: 7153779483201585158, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
       propertyPath: m_Name
       value: Line7
@@ -6062,6 +6086,14 @@ PrefabInstance:
       propertyPath: nextShape
       value: 
       objectReference: {fileID: 1928386588}
+    - target: {fileID: 6235142300857021181, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
+      propertyPath: leftController
+      value: 
+      objectReference: {fileID: 1334812854}
+    - target: {fileID: 6235142300857021181, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
+      propertyPath: rightController
+      value: 
+      objectReference: {fileID: 1842442528}
     - target: {fileID: 7153779483201585158, guid: f9cb094448e9a4ffd94d2709e7aba585, type: 3}
       propertyPath: m_Name
       value: Line6
@@ -6141,6 +6173,14 @@ PrefabInstance:
       propertyPath: nextShape
       value: 
       objectReference: {fileID: 1560246706}
+    - target: {fileID: 7549955841211995357, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: leftController
+      value: 
+      objectReference: {fileID: 1842442528}
+    - target: {fileID: 7549955841211995357, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
+      propertyPath: rightController
+      value: 
+      objectReference: {fileID: 1842442528}
     - target: {fileID: 8914921102151606149, guid: 358aef885a6ba40ec853d0eb56068b98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -7,17 +7,16 @@ public class TypingSentenceManager : MonoBehaviour
 {
     public TextMeshProUGUI targetSentence;
     public TextMeshProUGUI sentenceID;
-    public TMP_InputField enteredSentence;
+    public static TMP_InputField enteredSentence;
     public GameObject nextDialog;
     public GameObject keyboard;
     public GameObject canvas;
     public float startTime;
     public float endTime;
-    public float typingTime;
+    public static float typingTime;
     public GameObject startButton;
-    public KeyboardWord keyboardWord;
 
-    public List<string> sentences = new List<string>() {
+    public static List<string> sentences = new List<string>() {
         "my watch fell in the water",
         "breathing is difficult",
         "my bank account is overdrawn",
@@ -25,7 +24,7 @@ public class TypingSentenceManager : MonoBehaviour
         "time to go shopping"
     };
 
-    public int index = 1;
+    public static int index = 1;
 
     private void Start()
     {
