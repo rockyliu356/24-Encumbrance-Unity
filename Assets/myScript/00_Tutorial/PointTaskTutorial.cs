@@ -12,11 +12,13 @@ public class PointTaskTutorial : MonoBehaviour
     [SerializeField] private GameObject nextDialog;
     [SerializeField] private GameObject leftController;
     [SerializeField] private GameObject rightController;
-
-    private int currentIndex = 0;
+    public static Vector3 centerLocation;
+    public static Vector3 fingerLocation;
+    public static int currentIndex = 0;
+    public static int buttonNumber;
     private bool isFirstSelection = true;
-    private float distance = 0.03f;
-    private float scale = 0.06f;
+    public static float distance = 0.03f;
+    public static float scale = 0.06f;
 
     private InteractableColorVisual.ColorState grayColorState = new InteractableColorVisual.ColorState
     {
@@ -62,6 +64,7 @@ public class PointTaskTutorial : MonoBehaviour
 
     public void onButtonClicked(int buttonIndex)
     {
+        buttonNumber = buttonIndex;
         if (isFirstSelection)
         {
             setSelectColour(buttons[currentIndex]);
@@ -136,5 +139,15 @@ public class PointTaskTutorial : MonoBehaviour
         nextDialog.SetActive(true);
         leftController.SetActive(false);
         rightController.SetActive(false);
+    }
+
+    public void GetCenterLocation(GameObject gameObject)
+    {
+        centerLocation = gameObject.transform.position;
+    }
+
+    public void GetFingerLocation(GameObject gameObject)
+    {
+        fingerLocation = gameObject.transform.position;
     }
 }

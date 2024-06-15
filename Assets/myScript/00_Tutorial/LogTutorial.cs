@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
-public class Logger : MonoBehaviour
+public class LogTutorial : MonoBehaviour
 {
+
     // variables for 01_FittsPoke and 02_FittsRay
     private float buttonScale;
     private float buttonDistance;
@@ -21,16 +23,16 @@ public class Logger : MonoBehaviour
     private Vector3 ballLocation;
 
     // variables for 04_TypingTask
-    public static string targetSentence { get; set; }
+    public TextMeshProUGUI targetSentence;
+    // public static string targetSentence { get; set; }
     public static string enteredSentence { get; set; }
 
     // global variables
+    private string tutorialName;
     private bool startRecord;
     private string currentEntry;
     private List<string> allEntries;
-    private List<string> allEntriesFull;
     private string logPath;
-    private string logPathFull;
     private string iterationNumStr;
     private string sceneNumStr;
     private string sceneName;
@@ -42,47 +44,34 @@ public class Logger : MonoBehaviour
         startRecord = false;
 
         allEntries = new List<string>();
-
-        iterationNumStr = (RandomSceneManager.currentIndex / 6).ToString();
-        sceneNumStr = SceneManager.GetActiveScene().buildIndex.ToString();
         sceneName = SceneManager.GetActiveScene().name;
 
         string fname = iterationNumStr + "_" + sceneNumStr + "_" + sceneName + "_" + System.DateTime.Now.ToString("dd-MMM HH-mm-ss") + ".csv";
         logPath = Path.Combine(Application.persistentDataPath, fname);
 
-        if (sceneName == "01_FittsPoke" || sceneName == "02_FittsRay")
+        if (sceneName == "00_Tutorial")
         {
-            logPathFull = Path.Combine(Application.persistentDataPath, fname);
-            allEntries.Add("sceneName,sceneNum,iterationNum,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,currentTime");
-            allEntriesFull.Add("sceneName,sceneNum,iterationNum,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,currentTime");
-        }
-        else if (sceneName == "03_TracingTask")
-        {
-            allEntries.Add("sceneName,sceneNum,iterationNum,shapeName,currentTime,ballLocationX,ballLocationY,ballLocationZ");
-        }
-        else if (sceneName == "04_TypingTask")
-        {
-            allEntries.Add("sceneName,sceneNum,iterationNum,targetSentence,enteredSentence,currentTime");
+            allEntries.Add("sceneName,currentTime,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,shapeName,ballLocationX,ballLocationY,ballLocationZ,targetSentence,enteredSentence");
         }
     }
 
     void FixedUpdate()
     {
-        if (startRecord)
+        if (startRecord && sceneName == "00_Tutorial")
         {
-            if (sceneName == "01_FittsPoke")
+            if (tutorialName == "01_FittsPoke")
             {
                 LogFittsPoke();
             }
-            else if (sceneName == "02_FittsRay")
+            else if (tutorialName == "02_FittsRay")
             {
-                LogButtonDeactive();
+                LogFittsRay();
             }
-            else if (sceneName == "03_TracingTask")
+            else if (tutorialName == "Line6")
             {
                 LogTracingTask();
             }
-            else if (sceneName == "04_TypingTask")
+            else if (tutorialName == "04_TypingTask")
             {
                 if (logButtonActive)
                 {
@@ -93,16 +82,10 @@ public class Logger : MonoBehaviour
         }
     }
 
-    void WriteToCSV()
+    public void WriteToCSV()
     {
         File.AppendAllLines(logPath, allEntries);
         allEntries.Clear();
-        if (sceneName == "01_FittsPoke" || sceneName == "02_FittsRay")
-        {
-            File.AppendAllLines(logPathFull, allEntriesFull);
-            allEntriesFull.Clear();
-            Debug.Log("WriteToCSVFull");
-        }
         Debug.Log("WriteToCSV");
     }
 
@@ -119,6 +102,11 @@ public class Logger : MonoBehaviour
             position.z.ToString();
     }
 
+    public void GetName(GameObject gameObject)
+    {
+        tutorialName = gameObject.name.ToString();
+    }
+
     public void StartRecordLog()
     {
         startRecord = true;
@@ -129,7 +117,6 @@ public class Logger : MonoBehaviour
     {
         startRecord = false;
         Debug.Log("StopRecord");
-        WriteToCSV();
     }
 
     public void LogButtonActive()
@@ -144,95 +131,113 @@ public class Logger : MonoBehaviour
 
     void LogFittsPoke()
     {
-        buttonScale = PointTask.scales[PointTask.randomList[PointTask.currentIteration]];
-        buttonDistance = PointTask.distances[PointTask.randomList[PointTask.currentIteration]];
-        targetButton = PointTask.currentIndex;
-        clickedButton = PointTask.buttonNumber;
-        centerLocation = PointTask.centerLocation;
-        fingerLocation = PointTask.fingerLocation;
+        // sceneName,currentTime,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,ballLocationX,ballLocationY,ballLocationZ,targetSentence,enteredSentence
+        buttonScale = PointTaskTutorial.scale;
+        buttonDistance = PointTaskTutorial.distance;
+        targetButton = PointTaskTutorial.currentIndex;
+        clickedButton = PointTaskTutorial.buttonNumber;
+        centerLocation = PointTaskTutorial.centerLocation;
+        fingerLocation = PointTaskTutorial.fingerLocation;
 
         currentEntry = new string(
-            sceneName + "," +
-            sceneNumStr + "," +
-            iterationNumStr + "," +
-            buttonScale.ToString() + "," +
-            buttonDistance.ToString() + "," +
-            targetButton.ToString() + "," +
-            clickedButton.ToString() + "," +
-            Vector3ToString(centerLocation) + "," +
-            Vector3ToString(fingerLocation) + "," +
-            GetTimeStamp());
-
-        allEntriesFull.Add(currentEntry);
-
-        if (logButtonActive)
-        {
-            allEntries.Add(currentEntry);
-            LogButtonDeactive();
-        }
-
-        currentEntry = new string("");
-    }
-
-    void LogFittsRay()
-    {
-        buttonScale = RayTask.scales[RayTask.randomList[RayTask.currentIteration]];
-        buttonDistance = RayTask.distances[RayTask.randomList[RayTask.currentIteration]];
-        targetButton = RayTask.currentIndex;
-        clickedButton = RayTask.buttonNumber;
-        centerLocation = RayTask.centerLocation;
-        fingerLocation = RayTask.fingerLocation;
-
-        currentEntry = new string(
-            sceneName + "," +
-            sceneNumStr + "," +
-            iterationNumStr + "," +
-            buttonScale.ToString() + "," +
-            buttonDistance.ToString() + "," +
-            targetButton.ToString() + "," +
-            clickedButton.ToString() + "," +
-            Vector3ToString(centerLocation) + "," +
-            Vector3ToString(fingerLocation) + "," +
-            GetTimeStamp());
-
-        allEntriesFull.Add(currentEntry);
-
-        if (logButtonActive)
-        {
-            allEntries.Add(currentEntry);
-            LogButtonDeactive();
-        }
-
-        currentEntry = new string("");
-    }
-
-    void LogTracingTask()
-    {
-        shapeName = getBallLocation.GetShapeName();
-        ballLocation = getBallLocation.GetBallPosition();
-
-        currentEntry = new string(
-            sceneName + "," +
-            sceneNumStr + "," +
-            iterationNumStr + "," +
-            shapeName + "," +
+            tutorialName + "," +
             GetTimeStamp() + "," +
-            Vector3ToString(ballLocation));
+            buttonScale.ToString() + "," +
+            buttonDistance.ToString() + "," +
+            targetButton.ToString() + "," +
+            clickedButton.ToString() + "," +
+            Vector3ToString(centerLocation) + "," +
+            Vector3ToString(fingerLocation) + "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            ""
+            );
 
         allEntries.Add(currentEntry);
 
         currentEntry = new string("");
     }
 
+    void LogFittsRay()
+    {
+        // sceneName,currentTime,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,ballLocationX,ballLocationY,ballLocationZ,targetSentence,enteredSentence
+        buttonScale = FittsRayTutorial.scale;
+        buttonDistance = FittsRayTutorial.distance;
+        targetButton = FittsRayTutorial.currentIndex;
+        clickedButton = FittsRayTutorial.buttonNumber;
+        centerLocation = FittsRayTutorial.centerLocation;
+        fingerLocation = FittsRayTutorial.fingerLocation;
+
+        currentEntry = new string(
+            tutorialName + "," +
+            GetTimeStamp() + "," +
+            buttonScale.ToString() + "," +
+            buttonDistance.ToString() + "," +
+            targetButton.ToString() + "," +
+            clickedButton.ToString() + "," +
+            Vector3ToString(centerLocation) + "," +
+            Vector3ToString(fingerLocation) + "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            ""
+            );
+
+        allEntries.Add(currentEntry);
+
+        currentEntry = new string("");
+    }
+
+    void LogTracingTask()
+    {
+        // sceneName,currentTime,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,ballLocationX,ballLocationY,ballLocationZ,targetSentence,enteredSentence
+        shapeName = getBallLocation.GetShapeName();
+        ballLocation = getBallLocation.GetBallPosition();
+
+        currentEntry = new string(
+            shapeName + "," +
+            GetTimeStamp() + "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            Vector3ToString(ballLocation)
+        );
+
+        allEntries.Add(currentEntry);
+
+        currentEntry = new string("");
+    }
     void LogTypingTask()
     {
+        // sceneName,currentTime,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,ballLocationX,ballLocationY,ballLocationZ,targetSentence,enteredSentence
         currentEntry = new string(
-            sceneName + "," +
-            sceneNumStr + "," +
-            iterationNumStr + "," +
+            tutorialName + "," +
+            GetTimeStamp() + "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
+            "," +
             targetSentence + "," +
-            enteredSentence + "," +
-            GetTimeStamp());
+            enteredSentence);
 
         allEntries.Add(currentEntry);
 
