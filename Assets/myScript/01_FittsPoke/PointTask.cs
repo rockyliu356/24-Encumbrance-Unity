@@ -10,11 +10,11 @@ public class PointTask : MonoBehaviour
 {
     [SerializeField] private List<GameObject> buttons;
     [SerializeField] private GameObject nextDialog;
-    public static Vector3 centerLocation;
+    public static Vector3 centerLocation = new Vector3(0, 0, 0);
     public static Vector3 fingerLocation;
 
     public static int currentIndex = 0;
-    public static int buttonNumber;
+    public static int buttonNumber = 0;
     private bool isFirstSelection = true;
     public static int currentIteration = 0;
     public static List<int> randomList = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8 };

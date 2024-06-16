@@ -9,6 +9,7 @@ public class KeyboardWord : MonoBehaviour
     private void Update()
     {
         Logger.enteredSentence = inputField.text;
+        LogTutorial.enteredSentence = inputField.text;
     }
 
     public void OnKeyClicked(string key)

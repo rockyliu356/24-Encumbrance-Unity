@@ -15,7 +15,9 @@ public class LogTutorial : MonoBehaviour
     private int targetButton;
     private int clickedButton;
     private Vector3 centerLocation;
-    private Vector3 fingerLocation;
+    // private Vector3 fingerLocation;
+    public GameObject fingerLocation;
+    public GameObject rayLocation;
 
     // variables for 03_TracingTask
     public GetBallLocation getBallLocation;
@@ -33,8 +35,6 @@ public class LogTutorial : MonoBehaviour
     private string currentEntry;
     private List<string> allEntries;
     private string logPath;
-    private string iterationNumStr;
-    private string sceneNumStr;
     private string sceneName;
     private bool logButtonActive;
 
@@ -46,12 +46,12 @@ public class LogTutorial : MonoBehaviour
         allEntries = new List<string>();
         sceneName = SceneManager.GetActiveScene().name;
 
-        string fname = iterationNumStr + "_" + sceneNumStr + "_" + sceneName + "_" + System.DateTime.Now.ToString("dd-MMM HH-mm-ss") + ".csv";
+        string fname = sceneName + "_" + System.DateTime.Now.ToString("dd-MMM HH-mm-ss") + ".csv";
         logPath = Path.Combine(Application.persistentDataPath, fname);
 
         if (sceneName == "00_Tutorial")
         {
-            allEntries.Add("sceneName,currentTime,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,shapeName,ballLocationX,ballLocationY,ballLocationZ,targetSentence,enteredSentence");
+            allEntries.Add("sceneName,currentTime,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,ballLocationX,ballLocationY,ballLocationZ,targetSentence,enteredSentence");
         }
     }
 
@@ -92,7 +92,7 @@ public class LogTutorial : MonoBehaviour
     string GetTimeStamp()
     {
         DateTime currentTime = DateTime.Now;
-        return currentTime.ToString("HH:mm:ss.fff");
+        return currentTime.ToString("yyyy-MM-dd HH:mm:ss.fff");
     }
 
     string Vector3ToString(Vector3 position)
@@ -137,7 +137,8 @@ public class LogTutorial : MonoBehaviour
         targetButton = PointTaskTutorial.currentIndex;
         clickedButton = PointTaskTutorial.buttonNumber;
         centerLocation = PointTaskTutorial.centerLocation;
-        fingerLocation = PointTaskTutorial.fingerLocation;
+        // fingerLocation = PointTaskTutorial.fingerLocation;
+        Vector3 location = fingerLocation.transform.position;
 
         currentEntry = new string(
             tutorialName + "," +
@@ -147,7 +148,7 @@ public class LogTutorial : MonoBehaviour
             targetButton.ToString() + "," +
             clickedButton.ToString() + "," +
             Vector3ToString(centerLocation) + "," +
-            Vector3ToString(fingerLocation) + "," +
+            Vector3ToString(location) + "," +
             "," +
             "," +
             "," +
@@ -168,7 +169,8 @@ public class LogTutorial : MonoBehaviour
         targetButton = FittsRayTutorial.currentIndex;
         clickedButton = FittsRayTutorial.buttonNumber;
         centerLocation = FittsRayTutorial.centerLocation;
-        fingerLocation = FittsRayTutorial.fingerLocation;
+        // fingerLocation = FittsRayTutorial.fingerLocation;
+        Vector3 location = rayLocation.transform.position;
 
         currentEntry = new string(
             tutorialName + "," +
@@ -178,7 +180,7 @@ public class LogTutorial : MonoBehaviour
             targetButton.ToString() + "," +
             clickedButton.ToString() + "," +
             Vector3ToString(centerLocation) + "," +
-            Vector3ToString(fingerLocation) + "," +
+            Vector3ToString(location) + "," +
             "," +
             "," +
             "," +
@@ -236,7 +238,7 @@ public class LogTutorial : MonoBehaviour
             "," +
             "," +
             "," +
-            targetSentence + "," +
+            targetSentence.text + "," +
             enteredSentence);
 
         allEntries.Add(currentEntry);

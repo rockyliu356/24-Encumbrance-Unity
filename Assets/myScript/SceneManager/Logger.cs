@@ -13,7 +13,9 @@ public class Logger : MonoBehaviour
     private int targetButton;
     private int clickedButton;
     private Vector3 centerLocation;
-    private Vector3 fingerLocation;
+    // private Vector3 fingerLocation;
+    public GameObject fingerLocation;
+    public GameObject rayLocation;
 
     // variables for 03_TracingTask
     public GetBallLocation getBallLocation;
@@ -40,8 +42,10 @@ public class Logger : MonoBehaviour
     void Start()
     {
         startRecord = false;
+        logButtonActive = false;
 
         allEntries = new List<string>();
+        allEntriesFull = new List<string>();
 
         iterationNumStr = (RandomSceneManager.currentIndex / 6).ToString();
         sceneNumStr = SceneManager.GetActiveScene().buildIndex.ToString();
@@ -50,10 +54,13 @@ public class Logger : MonoBehaviour
         string fname = iterationNumStr + "_" + sceneNumStr + "_" + sceneName + "_" + System.DateTime.Now.ToString("dd-MMM HH-mm-ss") + ".csv";
         logPath = Path.Combine(Application.persistentDataPath, fname);
 
+        string fnameFull = iterationNumStr + "_" + sceneNumStr + "_" + sceneName + "_Full_" + System.DateTime.Now.ToString("dd-MMM HH-mm-ss") + ".csv";
+        logPathFull = Path.Combine(Application.persistentDataPath, fnameFull);
+
         if (sceneName == "01_FittsPoke" || sceneName == "02_FittsRay")
         {
-            logPathFull = Path.Combine(Application.persistentDataPath, fname);
             allEntries.Add("sceneName,sceneNum,iterationNum,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,currentTime");
+
             allEntriesFull.Add("sceneName,sceneNum,iterationNum,buttonScale,buttonDistance,targetButton,clickedButton,centerLocationX,centerLocationY,centerLocationZ,fingerLocationX,fingerLocationY,fingerLocationZ,currentTime");
         }
         else if (sceneName == "03_TracingTask")
@@ -72,11 +79,21 @@ public class Logger : MonoBehaviour
         {
             if (sceneName == "01_FittsPoke")
             {
-                LogFittsPoke();
+                if (logButtonActive)
+                {
+                    LogFittsPoke();
+                    LogButtonDeactive();
+                }
+                LogFittsPokeFull();
             }
             else if (sceneName == "02_FittsRay")
             {
-                LogButtonDeactive();
+                if (logButtonActive)
+                {
+                    LogFittsRay();
+                    LogButtonDeactive();
+                }
+                LogFittsRayFull();
             }
             else if (sceneName == "03_TracingTask")
             {
@@ -97,19 +114,20 @@ public class Logger : MonoBehaviour
     {
         File.AppendAllLines(logPath, allEntries);
         allEntries.Clear();
-        if (sceneName == "01_FittsPoke" || sceneName == "02_FittsRay")
-        {
-            File.AppendAllLines(logPathFull, allEntriesFull);
-            allEntriesFull.Clear();
-            Debug.Log("WriteToCSVFull");
-        }
         Debug.Log("WriteToCSV");
+    }
+
+    void WriteToCSVFull()
+    {
+        File.AppendAllLines(logPathFull, allEntriesFull);
+        allEntriesFull.Clear();
+        Debug.Log("WriteToCSVFull");
     }
 
     string GetTimeStamp()
     {
         DateTime currentTime = DateTime.Now;
-        return currentTime.ToString("HH:mm:ss.fff");
+        return currentTime.ToString("yyyy-MM-dd HH:mm:ss.fff");
     }
 
     string Vector3ToString(Vector3 position)
@@ -122,14 +140,21 @@ public class Logger : MonoBehaviour
     public void StartRecordLog()
     {
         startRecord = true;
-        Debug.Log("StartRecord");
+        Debug.Log("StartRecordLog");
     }
 
     public void StopRecordLog()
     {
         startRecord = false;
-        Debug.Log("StopRecord");
+        Debug.Log("StopRecordLog");
         WriteToCSV();
+    }
+
+    public void StopRecordLogFull()
+    {
+        startRecord = false;
+        Debug.Log("StopRecordLogFull");
+        WriteToCSVFull();
     }
 
     public void LogButtonActive()
@@ -142,14 +167,15 @@ public class Logger : MonoBehaviour
         logButtonActive = false;
     }
 
-    void LogFittsPoke()
+    void LogFittsPokeFull()
     {
         buttonScale = PointTask.scales[PointTask.randomList[PointTask.currentIteration]];
         buttonDistance = PointTask.distances[PointTask.randomList[PointTask.currentIteration]];
         targetButton = PointTask.currentIndex;
         clickedButton = PointTask.buttonNumber;
         centerLocation = PointTask.centerLocation;
-        fingerLocation = PointTask.fingerLocation;
+        // fingerLocation = PointTask.fingerLocation;
+        Vector3 location = fingerLocation.transform.position;
 
         currentEntry = new string(
             sceneName + "," +
@@ -160,16 +186,64 @@ public class Logger : MonoBehaviour
             targetButton.ToString() + "," +
             clickedButton.ToString() + "," +
             Vector3ToString(centerLocation) + "," +
-            Vector3ToString(fingerLocation) + "," +
+            Vector3ToString(location) + "," +
             GetTimeStamp());
 
         allEntriesFull.Add(currentEntry);
 
-        if (logButtonActive)
-        {
-            allEntries.Add(currentEntry);
-            LogButtonDeactive();
-        }
+        currentEntry = new string("");
+    }
+
+    void LogFittsPoke()
+    {
+        buttonScale = PointTask.scales[PointTask.randomList[PointTask.currentIteration]];
+        buttonDistance = PointTask.distances[PointTask.randomList[PointTask.currentIteration]];
+        targetButton = PointTask.currentIndex;
+        clickedButton = PointTask.buttonNumber;
+        centerLocation = PointTask.centerLocation;
+        // fingerLocation = PointTask.fingerLocation;
+        Vector3 location = fingerLocation.transform.position;
+
+        currentEntry = new string(
+            sceneName + "," +
+            sceneNumStr + "," +
+            iterationNumStr + "," +
+            buttonScale.ToString() + "," +
+            buttonDistance.ToString() + "," +
+            targetButton.ToString() + "," +
+            clickedButton.ToString() + "," +
+            Vector3ToString(centerLocation) + "," +
+            Vector3ToString(location) + "," +
+            GetTimeStamp());
+
+        allEntries.Add(currentEntry);
+
+        currentEntry = new string("");
+    }
+
+    void LogFittsRayFull()
+    {
+        buttonScale = RayTask.scales[RayTask.randomList[RayTask.currentIteration]];
+        buttonDistance = RayTask.distances[RayTask.randomList[RayTask.currentIteration]];
+        targetButton = RayTask.currentIndex;
+        clickedButton = RayTask.buttonNumber;
+        centerLocation = RayTask.centerLocation;
+        // fingerLocation = FittsRayTutorial.fingerLocation;
+        Vector3 location = rayLocation.transform.position;
+
+        currentEntry = new string(
+            sceneName + "," +
+            sceneNumStr + "," +
+            iterationNumStr + "," +
+            buttonScale.ToString() + "," +
+            buttonDistance.ToString() + "," +
+            targetButton.ToString() + "," +
+            clickedButton.ToString() + "," +
+            Vector3ToString(centerLocation) + "," +
+            Vector3ToString(location) + "," +
+            GetTimeStamp());
+
+        allEntriesFull.Add(currentEntry);
 
         currentEntry = new string("");
     }
@@ -181,7 +255,8 @@ public class Logger : MonoBehaviour
         targetButton = RayTask.currentIndex;
         clickedButton = RayTask.buttonNumber;
         centerLocation = RayTask.centerLocation;
-        fingerLocation = RayTask.fingerLocation;
+        // fingerLocation = FittsRayTutorial.fingerLocation;
+        Vector3 location = rayLocation.transform.position;
 
         currentEntry = new string(
             sceneName + "," +
@@ -192,16 +267,10 @@ public class Logger : MonoBehaviour
             targetButton.ToString() + "," +
             clickedButton.ToString() + "," +
             Vector3ToString(centerLocation) + "," +
-            Vector3ToString(fingerLocation) + "," +
+            Vector3ToString(location) + "," +
             GetTimeStamp());
 
-        allEntriesFull.Add(currentEntry);
-
-        if (logButtonActive)
-        {
-            allEntries.Add(currentEntry);
-            LogButtonDeactive();
-        }
+        allEntries.Add(currentEntry);
 
         currentEntry = new string("");
     }
