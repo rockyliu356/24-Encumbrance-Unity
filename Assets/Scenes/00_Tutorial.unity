@@ -736,8 +736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3dbad636d98245c5b4d426c061ee338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerLocation: {fileID: 175553057}
-  rayLocation: {fileID: 2010937441}
+  fingerLocation: {fileID: 1314224270}
+  rayLocation: {fileID: 353265365}
   getBallLocation: {fileID: 1139522312}
   targetSentence: {fileID: 1256093499}
 --- !u!1001 &69440247
