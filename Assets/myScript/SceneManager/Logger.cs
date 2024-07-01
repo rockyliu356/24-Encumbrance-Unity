@@ -169,8 +169,8 @@ public class Logger : MonoBehaviour
 
     void LogFittsPokeFull()
     {
-        buttonScale = PointTask.scales[PointTask.randomList[PointTask.currentIteration]];
-        buttonDistance = PointTask.distances[PointTask.randomList[PointTask.currentIteration]];
+        buttonScale = PointTask.scales[PointTask.randomList[PointTask.currentIteration - 1]];
+        buttonDistance = PointTask.distances[PointTask.randomList[PointTask.currentIteration - 1]];
         targetButton = PointTask.currentIndex;
         clickedButton = PointTask.buttonNumber;
         centerLocation = PointTask.centerLocation;
@@ -196,8 +196,8 @@ public class Logger : MonoBehaviour
 
     void LogFittsPoke()
     {
-        buttonScale = PointTask.scales[PointTask.randomList[PointTask.currentIteration]];
-        buttonDistance = PointTask.distances[PointTask.randomList[PointTask.currentIteration]];
+        buttonScale = PointTask.scales[PointTask.randomList[PointTask.currentIteration - 1]];
+        buttonDistance = PointTask.distances[PointTask.randomList[PointTask.currentIteration - 1]];
         targetButton = PointTask.currentIndex;
         clickedButton = PointTask.buttonNumber;
         centerLocation = PointTask.centerLocation;
@@ -223,8 +223,8 @@ public class Logger : MonoBehaviour
 
     void LogFittsRayFull()
     {
-        buttonScale = RayTask.scales[RayTask.randomList[RayTask.currentIteration]];
-        buttonDistance = RayTask.distances[RayTask.randomList[RayTask.currentIteration]];
+        buttonScale = RayTask.scales[RayTask.randomList[RayTask.currentIteration - 1]];
+        buttonDistance = RayTask.distances[RayTask.randomList[RayTask.currentIteration - 1]];
         targetButton = RayTask.currentIndex;
         clickedButton = RayTask.buttonNumber;
         centerLocation = RayTask.centerLocation;
@@ -250,8 +250,8 @@ public class Logger : MonoBehaviour
 
     void LogFittsRay()
     {
-        buttonScale = RayTask.scales[RayTask.randomList[RayTask.currentIteration]];
-        buttonDistance = RayTask.distances[RayTask.randomList[RayTask.currentIteration]];
+        buttonScale = RayTask.scales[RayTask.randomList[RayTask.currentIteration - 1]];
+        buttonDistance = RayTask.distances[RayTask.randomList[RayTask.currentIteration - 1]];
         targetButton = RayTask.currentIndex;
         clickedButton = RayTask.buttonNumber;
         centerLocation = RayTask.centerLocation;
