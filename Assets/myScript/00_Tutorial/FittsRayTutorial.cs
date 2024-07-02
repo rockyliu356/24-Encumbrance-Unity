@@ -17,8 +17,8 @@ public class FittsRayTutorial : MonoBehaviour
     public static int currentIndex = 0;
     public static int buttonNumber;
     private bool isFirstSelection = true;
-    public static float distance = 0.03f;
-    public static float scale = 0.06f;
+    public static float distance = 0.06f;
+    public static float scale = 0.12f;
 
     private InteractableColorVisual.ColorState grayColorState = new InteractableColorVisual.ColorState
     {
