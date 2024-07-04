@@ -19,9 +19,9 @@ public class RayTask : MonoBehaviour
     public static int buttonNumber;
     private bool isFirstSelection = true;
     public static int currentIteration = 0;
-    public static List<int> randomList = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
-    public static List<float> scales = new List<float> { 0.12f, 0.12f, 0.12f, 0.08f, 0.08f, 0.08f, 0.16f, 0.16f, 0.16f };
-    public static List<float> distances = new List<float> { 0.02f, 0.06f, 0.1f, 0.02f, 0.06f, 0.1f, 0.02f, 0.06f, 0.1f };
+    public static List<int> randomList = new List<int> { 0, 1, 2, 3, 4, 5 };
+    public static List<float> scales = new List<float> { 0.12f, 0.12f, 0.08f, 0.08f, 0.16f, 0.16f };
+    public static List<float> distances = new List<float> { 0.06f, 0.10f, 0.06f, 0.10f, 0.06f, 0.10f };
 
     private InteractableColorVisual.ColorState grayColorState = new InteractableColorVisual.ColorState
     {

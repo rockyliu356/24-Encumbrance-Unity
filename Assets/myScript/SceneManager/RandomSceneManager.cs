@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public static class RandomSceneManager
 {
     // the number of levels of weight
-    public static int scenarios = 3;
+    public static int scenarios = 1;
 
     public static List<int> GenerateRandomList(int length)
     {
@@ -18,7 +18,7 @@ public static class RandomSceneManager
 
             while (tempList.Count < length)
             {
-                int nextRandom = Random.Range(1, 5); // Generates a number from 1 to 4 inclusive
+                int nextRandom = Random.Range(1, 4); // Generates a number from 1 to 3 inclusive
 
                 if (!tempList.Contains(nextRandom))
                 {
@@ -27,13 +27,13 @@ public static class RandomSceneManager
             }
 
             randomList.AddRange(tempList);
-            randomList.Add(5);
+            randomList.Add(4);
         }
 
         return randomList;
     }
 
-    public static List<int> sceneList = GenerateRandomList(4);
+    public static List<int> sceneList = GenerateRandomList(3);
     public static int currentIndex { get; set; }
 
     public static int getSceneNum()
