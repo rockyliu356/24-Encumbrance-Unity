@@ -12,10 +12,12 @@ public class Logger : MonoBehaviour
     private float buttonDistance;
     private int targetButton;
     private int clickedButton;
-    private Vector3 centerLocation;
+    // private Vector3 centerLocation;
     // private Vector3 fingerLocation;
     public GameObject fingerLocation;
     public GameObject rayLocation;
+    public List<GameObject> pokeCenterLocation;
+    public List<GameObject> rayCenterLocation;
 
     // variables for 03_TracingTask
     public GetBallLocation getBallLocation;
@@ -37,6 +39,7 @@ public class Logger : MonoBehaviour
     private string sceneNumStr;
     private string sceneName;
     private bool logButtonActive;
+    private string currentIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -48,13 +51,14 @@ public class Logger : MonoBehaviour
         allEntriesFull = new List<string>();
 
         iterationNumStr = (RandomSceneManager.currentIndex / 6).ToString();
+        currentIndex = RandomSceneManager.currentIndex.ToString();
         sceneNumStr = SceneManager.GetActiveScene().buildIndex.ToString();
         sceneName = SceneManager.GetActiveScene().name;
 
-        string fname = iterationNumStr + "_" + sceneNumStr + "_" + sceneName + "_" + System.DateTime.Now.ToString("dd-MMM HH-mm-ss") + ".csv";
+        string fname = iterationNumStr + "_" + currentIndex + "_" + sceneName + "_" + System.DateTime.Now.ToString("dd-MMM HH-mm-ss") + ".csv";
         logPath = Path.Combine(Application.persistentDataPath, fname);
 
-        string fnameFull = iterationNumStr + "_" + sceneNumStr + "_" + sceneName + "_Full_" + System.DateTime.Now.ToString("dd-MMM HH-mm-ss") + ".csv";
+        string fnameFull = iterationNumStr + "_" + currentIndex + "_" + sceneName + "_Full_" + System.DateTime.Now.ToString("dd-MMM HH-mm-ss") + ".csv";
         logPathFull = Path.Combine(Application.persistentDataPath, fnameFull);
 
         if (sceneName == "01_FittsPoke" || sceneName == "02_FittsRay")
@@ -173,19 +177,20 @@ public class Logger : MonoBehaviour
         buttonDistance = PointTask.distances[PointTask.randomList[PointTask.currentIteration - 1]];
         targetButton = PointTask.currentIndex;
         clickedButton = PointTask.buttonNumber;
-        centerLocation = PointTask.centerLocation;
+        // centerLocation = PointTask.centerLocation;
         // fingerLocation = PointTask.fingerLocation;
         Vector3 location = fingerLocation.transform.position;
+        Vector3 pokeLoc = pokeCenterLocation[clickedButton].transform.position;
 
         currentEntry = new string(
             sceneName + "," +
-            sceneNumStr + "," +
+            currentIndex + "," +
             iterationNumStr + "," +
             buttonScale.ToString() + "," +
             buttonDistance.ToString() + "," +
             targetButton.ToString() + "," +
             clickedButton.ToString() + "," +
-            Vector3ToString(centerLocation) + "," +
+            Vector3ToString(pokeLoc) + "," +
             Vector3ToString(location) + "," +
             GetTimeStamp());
 
@@ -199,20 +204,21 @@ public class Logger : MonoBehaviour
         buttonScale = PointTask.scales[PointTask.randomList[PointTask.currentIteration - 1]];
         buttonDistance = PointTask.distances[PointTask.randomList[PointTask.currentIteration - 1]];
         targetButton = PointTask.currentIndex;
-        clickedButton = PointTask.buttonNumber;
-        centerLocation = PointTask.centerLocation;
+        // clickedButton = PointTask.buttonNumber;
+        // centerLocation = PointTask.centerLocation;
         // fingerLocation = PointTask.fingerLocation;
         Vector3 location = fingerLocation.transform.position;
+        Vector3 pokeLoc = pokeCenterLocation[clickedButton].transform.position;
 
         currentEntry = new string(
             sceneName + "," +
-            sceneNumStr + "," +
+            currentIndex + "," +
             iterationNumStr + "," +
             buttonScale.ToString() + "," +
             buttonDistance.ToString() + "," +
             targetButton.ToString() + "," +
             clickedButton.ToString() + "," +
-            Vector3ToString(centerLocation) + "," +
+            Vector3ToString(pokeLoc) + "," +
             Vector3ToString(location) + "," +
             GetTimeStamp());
 
@@ -227,19 +233,20 @@ public class Logger : MonoBehaviour
         buttonDistance = RayTask.distances[RayTask.randomList[RayTask.currentIteration - 1]];
         targetButton = RayTask.currentIndex;
         clickedButton = RayTask.buttonNumber;
-        centerLocation = RayTask.centerLocation;
+        // centerLocation = RayTask.centerLocation;
         // fingerLocation = FittsRayTutorial.fingerLocation;
         Vector3 location = rayLocation.transform.position;
+        Vector3 rayLoc = rayCenterLocation[clickedButton].transform.position;
 
         currentEntry = new string(
             sceneName + "," +
-            sceneNumStr + "," +
+            currentIndex + "," +
             iterationNumStr + "," +
             buttonScale.ToString() + "," +
             buttonDistance.ToString() + "," +
             targetButton.ToString() + "," +
             clickedButton.ToString() + "," +
-            Vector3ToString(centerLocation) + "," +
+            Vector3ToString(rayLoc) + "," +
             Vector3ToString(location) + "," +
             GetTimeStamp());
 
@@ -254,19 +261,20 @@ public class Logger : MonoBehaviour
         buttonDistance = RayTask.distances[RayTask.randomList[RayTask.currentIteration - 1]];
         targetButton = RayTask.currentIndex;
         clickedButton = RayTask.buttonNumber;
-        centerLocation = RayTask.centerLocation;
+        // centerLocation = RayTask.centerLocation;
         // fingerLocation = FittsRayTutorial.fingerLocation;
         Vector3 location = rayLocation.transform.position;
+        Vector3 rayLoc = rayCenterLocation[clickedButton].transform.position;
 
         currentEntry = new string(
             sceneName + "," +
-            sceneNumStr + "," +
+            currentIndex + "," +
             iterationNumStr + "," +
             buttonScale.ToString() + "," +
             buttonDistance.ToString() + "," +
             targetButton.ToString() + "," +
             clickedButton.ToString() + "," +
-            Vector3ToString(centerLocation) + "," +
+            Vector3ToString(rayLoc) + "," +
             Vector3ToString(location) + "," +
             GetTimeStamp());
 
@@ -282,7 +290,7 @@ public class Logger : MonoBehaviour
 
         currentEntry = new string(
             sceneName + "," +
-            sceneNumStr + "," +
+            currentIndex + "," +
             iterationNumStr + "," +
             shapeName + "," +
             GetTimeStamp() + "," +
@@ -297,7 +305,7 @@ public class Logger : MonoBehaviour
     {
         currentEntry = new string(
             sceneName + "," +
-            sceneNumStr + "," +
+            currentIndex + "," +
             iterationNumStr + "," +
             targetSentence + "," +
             enteredSentence + "," +

@@ -14,10 +14,12 @@ public class LogTutorial : MonoBehaviour
     private float buttonDistance;
     private int targetButton;
     private int clickedButton;
-    private Vector3 centerLocation;
+    // private Vector3 centerLocation;
     // private Vector3 fingerLocation;
     public GameObject fingerLocation;
     public GameObject rayLocation;
+    public List<GameObject> pokeCenterLocation;
+    public List<GameObject> rayCenterLocation;
 
     // variables for 03_TracingTask
     public GetBallLocation getBallLocation;
@@ -136,9 +138,10 @@ public class LogTutorial : MonoBehaviour
         buttonDistance = PointTaskTutorial.distance;
         targetButton = PointTaskTutorial.currentIndex;
         clickedButton = PointTaskTutorial.buttonNumber;
-        centerLocation = PointTaskTutorial.centerLocation;
+        // centerLocation = PointTaskTutorial.centerLocation;
         // fingerLocation = PointTaskTutorial.fingerLocation;
         Vector3 location = fingerLocation.transform.position;
+        Vector3 pokeLoc = pokeCenterLocation[clickedButton].transform.position;
 
         currentEntry = new string(
             tutorialName + "," +
@@ -147,7 +150,7 @@ public class LogTutorial : MonoBehaviour
             buttonDistance.ToString() + "," +
             targetButton.ToString() + "," +
             clickedButton.ToString() + "," +
-            Vector3ToString(centerLocation) + "," +
+            Vector3ToString(pokeLoc) + "," +
             Vector3ToString(location) + "," +
             "," +
             "," +
@@ -168,9 +171,10 @@ public class LogTutorial : MonoBehaviour
         buttonDistance = FittsRayTutorial.distance;
         targetButton = FittsRayTutorial.currentIndex;
         clickedButton = FittsRayTutorial.buttonNumber;
-        centerLocation = FittsRayTutorial.centerLocation;
+        // centerLocation = FittsRayTutorial.centerLocation;
         // fingerLocation = FittsRayTutorial.fingerLocation;
         Vector3 location = rayLocation.transform.position;
+        Vector3 rayLoc = rayCenterLocation[clickedButton].transform.position;
 
         currentEntry = new string(
             tutorialName + "," +
@@ -179,7 +183,7 @@ public class LogTutorial : MonoBehaviour
             buttonDistance.ToString() + "," +
             targetButton.ToString() + "," +
             clickedButton.ToString() + "," +
-            Vector3ToString(centerLocation) + "," +
+            Vector3ToString(rayLoc) + "," +
             Vector3ToString(location) + "," +
             "," +
             "," +
