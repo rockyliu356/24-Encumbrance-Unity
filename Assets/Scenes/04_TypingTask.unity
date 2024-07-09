@@ -1635,7 +1635,7 @@ PrefabInstance:
     - target: {fileID: 6699800849083853406, guid: b454ad25999f14e578c4d60774eb3fc0, type: 3}
       propertyPath: typingSentenceManager
       value: 
-      objectReference: {fileID: 1117527078}
+      objectReference: {fileID: 0}
     - target: {fileID: 7161510211637734625, guid: b454ad25999f14e578c4d60774eb3fc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2753,7 +2753,7 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1117527078}
+      - m_Target: {fileID: 1175779105}
         m_TargetAssemblyTypeName: TypingSentenceManager, Assembly-CSharp
         m_MethodName: OnStartSelected
         m_Mode: 1
@@ -4439,17 +4439,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
   m_PrefabInstance: {fileID: 1097400476}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1117527078 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
-  m_PrefabInstance: {fileID: 7939460423081546775}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ee1be41e12ec49febf7cf47ceee03d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1117527079 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1775944207433279543, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
@@ -4524,6 +4513,17 @@ Transform:
   - {fileID: 370872536}
   m_Father: {fileID: 224142316}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1175779105 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8342110288544606071, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+  m_PrefabInstance: {fileID: 7939460423081546775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee1be41e12ec49febf7cf47ceee03d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1216123755
 GameObject:
   m_ObjectHideFlags: 0
@@ -6945,7 +6945,7 @@ PrefabInstance:
     - target: {fileID: 1165442381412725053, guid: fdc3a7ed39b1244f6a54db67ea501a64, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1117527078}
+      objectReference: {fileID: 1175779105}
     - target: {fileID: 1165442381412725053, guid: fdc3a7ed39b1244f6a54db67ea501a64, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -9139,6 +9139,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8342110288544606071, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1554507557}
+    - target: {fileID: 8342110288544606071, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: keyboard
+      value: 
+      objectReference: {fileID: 1810989505}
+    - target: {fileID: 8342110288544606071, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: nextDialog
+      value: 
+      objectReference: {fileID: 1412796687}
+    - target: {fileID: 8342110288544606071, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: sentenceID
+      value: 
+      objectReference: {fileID: 1499555420}
+    - target: {fileID: 8342110288544606071, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: startButton
+      value: 
+      objectReference: {fileID: 780183827}
+    - target: {fileID: 8342110288544606071, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: targetSentence
+      value: 
+      objectReference: {fileID: 916725032}
     - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
       propertyPath: canvas
       value: 
@@ -9163,6 +9187,1990 @@ PrefabInstance:
       propertyPath: targetSentence
       value: 
       objectReference: {fileID: 916725032}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[5]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[6]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[7]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[8]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[9]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[10]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[11]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[12]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[13]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[14]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[15]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[16]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[17]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[18]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[19]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[20]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[21]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[22]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[23]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[24]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[25]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[26]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[27]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[28]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[29]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[30]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[31]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[32]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[33]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[34]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[35]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[36]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[37]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[38]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[39]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[40]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[41]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[42]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[43]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[44]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[45]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[46]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[47]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[48]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[49]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[50]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[51]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[52]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[53]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[54]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[55]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[56]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[57]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[58]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[59]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[60]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[61]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[62]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[63]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[64]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[65]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[66]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[67]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[68]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[69]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[70]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[71]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[72]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[73]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[74]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[75]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[76]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[77]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[78]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[79]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[80]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[81]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[82]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[83]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[84]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[85]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[86]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[87]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[88]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[89]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[90]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[91]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[92]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[93]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[94]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[95]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[96]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[97]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[98]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[99]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[100]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[101]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[102]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[103]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[104]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[105]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[106]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[107]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[108]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[109]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[110]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[111]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[112]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[113]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[114]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[115]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[116]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[117]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[118]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[119]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[120]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[121]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[122]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[123]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[124]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[125]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[126]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[127]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[128]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[129]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[130]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[131]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[132]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[133]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[134]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[135]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[136]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[137]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[138]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[139]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[140]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[141]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[142]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[143]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[144]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[145]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[146]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[147]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[148]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[149]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[150]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[151]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[152]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[153]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[154]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[155]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[156]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[157]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[158]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[159]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[160]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[161]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[162]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[163]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[164]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[165]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[166]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[167]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[168]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[169]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[170]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[171]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[172]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[173]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[174]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[175]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[176]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[177]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[178]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[179]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[180]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[181]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[182]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[183]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[184]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[185]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[186]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[187]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[188]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[189]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[190]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[191]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[192]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[193]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[194]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[195]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[196]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[197]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[198]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[199]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[200]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[201]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[202]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[203]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[204]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[205]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[206]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[207]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[208]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[209]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[210]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[211]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[212]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[213]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[214]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[215]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[216]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[217]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[218]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[219]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[220]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[221]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[222]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[223]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[224]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[225]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[226]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[227]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[228]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[229]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[230]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[231]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[232]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[233]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[234]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[235]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[236]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[237]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[238]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[239]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[240]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[241]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[242]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[243]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[244]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[245]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[246]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[247]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[248]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[249]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[250]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[251]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[252]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[253]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[254]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[255]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[256]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[257]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[258]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[259]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[260]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[261]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[262]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[263]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[264]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[265]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[266]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[267]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[268]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[269]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[270]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[271]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[272]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[273]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[274]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[275]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[276]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[277]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[278]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[279]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[280]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[281]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[282]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[283]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[284]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[285]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[286]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[287]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[288]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[289]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[290]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[291]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[292]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[293]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[294]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[295]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[296]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[297]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[298]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[299]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[300]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[301]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[302]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[303]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[304]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[305]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[306]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[307]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[308]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[309]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[310]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[311]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[312]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[313]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[314]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[315]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[316]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[317]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[318]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[319]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[320]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[321]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[322]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[323]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[324]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[325]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[326]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[327]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[328]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[329]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[330]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[331]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[332]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[333]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[334]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[335]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[336]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[337]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[338]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[339]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[340]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[341]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[342]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[343]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[344]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[345]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[346]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[347]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[348]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[349]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[350]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[351]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[352]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[353]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[354]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[355]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[356]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[357]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[358]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[359]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[360]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[361]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[362]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[363]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[364]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[365]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[366]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[367]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[368]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[369]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[370]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[371]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[372]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[373]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[374]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[375]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[376]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[377]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[378]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[379]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[380]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[381]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[382]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[383]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[384]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[385]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[386]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[387]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[388]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[389]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[390]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[391]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[392]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[393]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[394]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[395]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[396]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[397]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[398]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[399]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[400]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[401]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[402]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[403]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[404]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[405]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[406]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[407]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[408]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[409]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[410]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[411]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[412]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[413]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[414]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[415]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[416]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[417]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[418]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[419]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[420]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[421]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[422]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[423]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[424]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[425]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[426]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[427]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[428]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[429]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[430]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[431]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[432]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[433]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[434]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[435]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[436]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[437]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[438]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[439]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[440]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[441]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[442]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[443]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[444]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[445]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[446]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[447]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[448]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[449]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[450]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[451]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[452]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[453]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[454]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[455]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[456]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[457]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[458]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[459]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[460]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[461]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[462]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[463]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[464]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[465]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[466]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[467]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[468]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[469]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[470]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[471]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[472]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[473]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[474]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[475]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[476]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[477]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[478]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[479]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[480]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[481]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[482]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[483]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[484]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[485]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[486]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[487]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[488]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[489]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[490]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[491]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[492]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[493]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[494]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[495]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[496]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[497]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[498]
+      value: time to go shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494787375075941287, guid: 07b55c5c4c9204f8784d65bbdba238cd, type: 3}
+      propertyPath: allSentences.Array.data[499]
+      value: time to go shopping
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
