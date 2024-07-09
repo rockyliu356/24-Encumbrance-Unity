@@ -27,6 +27,7 @@ public class Logger : MonoBehaviour
     // variables for 04_TypingTask
     public static string targetSentence { get; set; }
     public static string enteredSentence { get; set; }
+    public static string fixedError { get; set; }
 
     // global variables
     private bool startRecord;
@@ -73,7 +74,7 @@ public class Logger : MonoBehaviour
         }
         else if (sceneName == "04_TypingTask")
         {
-            allEntries.Add("sceneName,sceneNum,iterationNum,targetSentence,enteredSentence,currentTime");
+            allEntries.Add("sceneName,sceneNum,iterationNum,targetSentence,enteredSentence,fixedError,currentTime");
         }
     }
 
@@ -309,6 +310,7 @@ public class Logger : MonoBehaviour
             iterationNumStr + "," +
             targetSentence + "," +
             enteredSentence + "," +
+            fixedError + "," +
             GetTimeStamp());
 
         allEntries.Add(currentEntry);
