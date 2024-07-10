@@ -27,7 +27,7 @@ public class Logger : MonoBehaviour
     // variables for 04_TypingTask
     public static string targetSentence { get; set; }
     public static string enteredSentence { get; set; }
-    public static string fixedError { get; set; }
+    public static int fixedError { get; set; }
 
     // global variables
     private bool startRecord;
@@ -310,7 +310,7 @@ public class Logger : MonoBehaviour
             iterationNumStr + "," +
             targetSentence + "," +
             enteredSentence + "," +
-            fixedError + "," +
+            fixedError.ToString() + "," +
             GetTimeStamp());
 
         allEntries.Add(currentEntry);
