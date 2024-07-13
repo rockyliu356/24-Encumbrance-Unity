@@ -508,7 +508,7 @@ public class TypingSentenceManager : MonoBehaviour
         "rejection letters are discouraging",
         "the first time he tried to swim",
         "that referendum asked a silly question",
-        "a steep learning curve in riding a unicycle",
+        "a steep learning curve in riding a unicycle",  // longest
         "a good stimulus deserves a good response",
         "everybody looses in custody battles",
         "put garbage in an abandoned mine",
