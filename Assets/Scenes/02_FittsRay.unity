@@ -3584,7 +3584,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 828681684700122907, guid: 0a556b6ffc6b64ac8a1ceea70335b1b1, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 828681684700122907, guid: 0a556b6ffc6b64ac8a1ceea70335b1b1, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3652,11 +3652,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 828681684700122907, guid: 0a556b6ffc6b64ac8a1ceea70335b1b1, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetLeftControllerActive
+      value: SetRightControllerActive
       objectReference: {fileID: 0}
     - target: {fileID: 828681684700122907, guid: 0a556b6ffc6b64ac8a1ceea70335b1b1, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: SetRightControllerActive
+      value: DeactiveCurrentDialog
       objectReference: {fileID: 0}
     - target: {fileID: 828681684700122907, guid: 0a556b6ffc6b64ac8a1ceea70335b1b1, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
@@ -3689,11 +3689,11 @@ PrefabInstance:
     - target: {fileID: 828681684700122907, guid: 0a556b6ffc6b64ac8a1ceea70335b1b1, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 370845964}
+      objectReference: {fileID: 33027164}
     - target: {fileID: 828681684700122907, guid: 0a556b6ffc6b64ac8a1ceea70335b1b1, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 33027164}
+      objectReference: {fileID: 858995808}
     - target: {fileID: 828681684700122907, guid: 0a556b6ffc6b64ac8a1ceea70335b1b1, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
       value: 
@@ -4363,6 +4363,10 @@ PrefabInstance:
       propertyPath: _trackingToWorldTransformer
       value: 
       objectReference: {fileID: 511861781}
+    - target: {fileID: 2429524573110555198, guid: ea16c3c8c1688234fa81a4f39339bf1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3363867107013514217, guid: ea16c3c8c1688234fa81a4f39339bf1b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4877,7 +4881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 336358375985414314, guid: e7fbb376593cff24f9db4ecf8d465aaf, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 336358375985414315, guid: e7fbb376593cff24f9db4ecf8d465aaf, type: 3}
       propertyPath: m_RootOrder
