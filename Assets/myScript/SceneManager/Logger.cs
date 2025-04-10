@@ -317,4 +317,20 @@ public class Logger : MonoBehaviour
 
         currentEntry = new string("");
     }
+
+    public void LogQuestionnaire(
+        float blurredNear,
+        float blurredDist,
+        float slowRefocus,
+        float irritatedEyes
+    )
+    {
+        string currentTime = GetTimeStamp();
+        string entry = "Questionnaire," + 
+                    blurredNear + "," + 
+                    blurredDist + "," + 
+                    "," + currentTime;
+        allEntries.Add(entry);
+}
+
 }
