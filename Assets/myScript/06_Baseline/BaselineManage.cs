@@ -4,12 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using TMPro;
+using Metaface.Utilities;
 
 public class BaselineManage : MonoBehaviour
 {
+    [Header("Blink Tracking")]
+    public BlinkHelper blinkHelper;
+
     [Header("UI References")]
     public TextMeshProUGUI countdownText;
     public GameObject questionnaireCanvas;
+    public GameObject submitButton;
+
 
     public Slider q1Slider;
     public Slider q2Slider;
@@ -23,16 +29,21 @@ public class BaselineManage : MonoBehaviour
     public Slider q10Slider;
 
     // Timer
-    private float timeRemaining = 3f;  // 3 minutes 
+    private float timeRemaining = 180f;  // 3 minutes 
     private bool timerRunning = false;
 
     // CSV logging path
     private string csvPath;
+    private string blinkLogPath;
+    private float totalTimeElapsed = 0f;
+    private bool blinkLoggingActive = false;
 
     void Start()
     {
         // Hide the questionnaire by default
         questionnaireCanvas.SetActive(false);
+        submitButton.SetActive(false);
+
 
         // Prepare the countdown text
         countdownText.text = "03:00";
@@ -45,6 +56,12 @@ public class BaselineManage : MonoBehaviour
         string header = "BlurredNear,BlurredDist,SlowRefocus,IrritatedEyes,DryEyes,Eyestrain,Headache,TiredEyes,Sensitivity,Discomfort,CurrentTime\n";
         File.AppendAllText(csvPath, header);
 
+        // Initialize blink logging
+        blinkLogPath = Path.Combine(Application.persistentDataPath, "BlinkLog_" + timeStamp + ".csv");
+        File.AppendAllText(blinkLogPath, "BlinkDuration(ms),CurrentTime\n");
+
+        blinkHelper.OnBlink.AddListener(HandleBlinkLogged);
+
         timerRunning = true;
     }
 
@@ -54,6 +71,15 @@ public class BaselineManage : MonoBehaviour
         {
             // Decrement time
             timeRemaining -= Time.deltaTime;
+            totalTimeElapsed += Time.deltaTime;
+
+            // 第1分钟后开启 blink 记录
+            if (!blinkLoggingActive && totalTimeElapsed >= 60f)
+            {
+                blinkLoggingActive = true;
+            }
+
+
             if (timeRemaining <= 0f)
             {
                 // Time's up
@@ -77,8 +103,12 @@ public class BaselineManage : MonoBehaviour
     /// </summary>
     private void OnTimeComplete()
     {
+        countdownText.gameObject.SetActive(false);
         // Show the questionnaire
         questionnaireCanvas.SetActive(true);
+        submitButton.SetActive(true);
+
+        blinkHelper.OnBlink.RemoveListener(HandleBlinkLogged);
     }
 
     /// <summary>
@@ -118,4 +148,18 @@ public class BaselineManage : MonoBehaviour
         // (Optional) move to next scene or do something else
         // SceneManager.LoadScene("NextScene");
     }
+
+    private void HandleBlinkLogged(BlinkHelper.BlinkEventArgs args)
+    {
+        // 只在 1 分钟后开始记录，且最多记录 2 分钟
+        if (!blinkLoggingActive || totalTimeElapsed > 180f)
+            return;
+
+        string blinkTimeStamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
+        float durationMs = args.EyesClosedTime * 1000f;
+
+        string line = $"{durationMs},{blinkTimeStamp}\n";
+        File.AppendAllText(blinkLogPath, line);
+    }
+
 }
