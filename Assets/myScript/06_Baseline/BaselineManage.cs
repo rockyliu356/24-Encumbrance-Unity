@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.IO;
 using TMPro;
 using Metaface.Utilities;
+using UnityEngine.SceneManagement;
 
 public class BaselineManage : MonoBehaviour
 {
@@ -146,7 +147,7 @@ public class BaselineManage : MonoBehaviour
         questionnaireCanvas.SetActive(false);
 
         // (Optional) move to next scene or do something else
-        // SceneManager.LoadScene("NextScene");
+        // SceneManager.LoadScene("0_");
     }
 
     private void HandleBlinkLogged(BlinkHelper.BlinkEventArgs args)
