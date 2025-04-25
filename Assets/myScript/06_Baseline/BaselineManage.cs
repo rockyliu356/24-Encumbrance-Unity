@@ -45,21 +45,21 @@ public class BaselineManage : MonoBehaviour
         questionnaireCanvas.SetActive(false);
         submitButton.SetActive(false);
 
-
         // Prepare the countdown text
         countdownText.text = "03:00";
 
-        // Create a CSV file path
+        // Create a CSV file of Questionnaire path
         string timeStamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-        csvPath = Path.Combine(Application.persistentDataPath, "Questionnaire_" + timeStamp + ".csv");
+        // csvPath = Path.Combine(Application.persistentDataPath, "Questionnaire_" + timeStamp + ".csv");
 
         // Optionally write header row to CSV
-        string header = "BlurredNear,BlurredDist,SlowRefocus,IrritatedEyes,DryEyes,Eyestrain,Headache,TiredEyes,Sensitivity,Discomfort,CurrentTime\n";
-        File.AppendAllText(csvPath, header);
+        // string header = "BlurredNear,BlurredDist,SlowRefocus,IrritatedEyes,DryEyes,Eyestrain,Headache,TiredEyes,Sensitivity,Discomfort,CurrentTime\n";
+        // File.AppendAllText(csvPath, header);
 
-        // Initialize blink logging
-        blinkLogPath = Path.Combine(Application.persistentDataPath, "BlinkLog_" + timeStamp + ".csv");
-        File.AppendAllText(blinkLogPath, "BlinkDuration(ms),CurrentTime\n");
+        // Create a CSV file for Blink log
+        blinkLogPath = Path.Combine(Application.persistentDataPath, "Baseline_BlinkLog_" + timeStamp + ".csv");
+        File.AppendAllText(blinkLogPath, "TaskType,BlinkDuration(ms),CurrentTime\n");
+
 
         blinkHelper.OnBlink.AddListener(HandleBlinkLogged);
 
@@ -74,7 +74,7 @@ public class BaselineManage : MonoBehaviour
             timeRemaining -= Time.deltaTime;
             totalTimeElapsed += Time.deltaTime;
 
-            // 第1分钟后开启 blink 记录
+            // After 1 minute, start logging blinks
             if (!blinkLoggingActive && totalTimeElapsed >= 60f)
             {
                 blinkLoggingActive = true;
@@ -107,7 +107,7 @@ public class BaselineManage : MonoBehaviour
         countdownText.gameObject.SetActive(false);
         // Show the questionnaire
         questionnaireCanvas.SetActive(true);
-        submitButton.SetActive(true);
+        // submitButton.SetActive(true);
 
         blinkHelper.OnBlink.RemoveListener(HandleBlinkLogged);
     }
@@ -146,20 +146,21 @@ public class BaselineManage : MonoBehaviour
         // Hide the questionnaire
         questionnaireCanvas.SetActive(false);
 
-        // (Optional) move to next scene or do something else
+        // move to next scene or do something else
         // SceneManager.LoadScene("0_");
     }
 
     private void HandleBlinkLogged(BlinkHelper.BlinkEventArgs args)
     {
-        // 只在 1 分钟后开始记录，且最多记录 2 分钟
+        // Only log blinks if the timer is running and more than 1 minute has passed
+        // and less than 3 minutes has passed
         if (!blinkLoggingActive || totalTimeElapsed > 180f)
             return;
 
         string blinkTimeStamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
         float durationMs = args.EyesClosedTime * 1000f;
 
-        string line = $"{durationMs},{blinkTimeStamp}\n";
+        string line = $"Baseline,{durationMs},{blinkTimeStamp}\n";
         File.AppendAllText(blinkLogPath, line);
     }
 
