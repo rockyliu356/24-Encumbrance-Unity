@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Metaface.Utilities; 
 
 public class Logger : MonoBehaviour
 {
@@ -42,6 +43,14 @@ public class Logger : MonoBehaviour
     private bool logButtonActive;
     private string currentIndex;
 
+    [Header("Blink Tracking")]
+    public BlinkHelper blinkHelper;
+
+    private string blinkLogPath;
+
+    private bool blinkLoggingActive = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +85,11 @@ public class Logger : MonoBehaviour
         {
             allEntries.Add("sceneName,sceneNum,iterationNum,targetSentence,enteredSentence,fixedError,currentTime");
         }
+
+        string ts = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+        blinkLogPath = Path.Combine(Application.persistentDataPath, $"{sceneName}_BlinkLog_{ts}.csv");
+        File.AppendAllText(blinkLogPath, "TaskType,BlinkDuration(ms),CurrentTime\n");
+        blinkHelper.OnBlink.AddListener(HandleBlinkLogged);
     }
 
     void FixedUpdate()
@@ -160,6 +174,30 @@ public class Logger : MonoBehaviour
         startRecord = false;
         Debug.Log("StopRecordLogFull");
         WriteToCSVFull();
+    }
+
+    public void StartRecordBlinkLog()
+    {
+        blinkLoggingActive = true;
+        Debug.Log("StartRecordBlinkLog");
+    }
+
+    public void StopRecordBlinkLog()
+    {
+        blinkLoggingActive = false;
+        blinkHelper.OnBlink.RemoveListener(HandleBlinkLogged);
+        Debug.Log("StopRecordBlinkLog");
+    }
+
+
+    private void HandleBlinkLogged(BlinkHelper.BlinkEventArgs args)
+    {
+        Debug.Log($"Blink detected: duration = {args.EyesClosedTime * 1000f} ms");
+        if (!blinkLoggingActive) return;  
+        string blinkTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
+        float durationMs = args.EyesClosedTime * 1000f;
+        string line = $"FittsPoke,{durationMs},{blinkTime}\n";
+        File.AppendAllText(blinkLogPath, line);
     }
 
     public void LogButtonActive()
@@ -317,20 +355,5 @@ public class Logger : MonoBehaviour
 
         currentEntry = new string("");
     }
-
-    public void LogQuestionnaire(
-        float blurredNear,
-        float blurredDist,
-        float slowRefocus,
-        float irritatedEyes
-    )
-    {
-        string currentTime = GetTimeStamp();
-        string entry = "Questionnaire," + 
-                    blurredNear + "," + 
-                    blurredDist + "," + 
-                    "," + currentTime;
-        allEntries.Add(entry);
-}
 
 }
