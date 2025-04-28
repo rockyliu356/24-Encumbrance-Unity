@@ -196,7 +196,7 @@ public class Logger : MonoBehaviour
         if (!blinkLoggingActive) return;  
         string blinkTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
         float durationMs = args.EyesClosedTime * 1000f;
-        string line = $"FittsPoke,{durationMs},{blinkTime}\n";
+        string line = $"{sceneName},{durationMs},{blinkTime}\n";
         File.AppendAllText(blinkLogPath, line);
     }
 
