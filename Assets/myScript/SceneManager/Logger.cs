@@ -159,12 +159,14 @@ public class Logger : MonoBehaviour
     public void StartRecordLog()
     {
         startRecord = true;
+        blinkLoggingActive = true;
         Debug.Log("StartRecordLog");
     }
 
     public void StopRecordLog()
     {
         startRecord = false;
+        blinkLoggingActive = false;
         Debug.Log("StopRecordLog");
         WriteToCSV();
     }
@@ -176,23 +178,12 @@ public class Logger : MonoBehaviour
         WriteToCSVFull();
     }
 
-    public void StartRecordBlinkLog()
-    {
-        blinkLoggingActive = true;
-        Debug.Log("StartRecordBlinkLog");
-    }
-
-    public void StopRecordBlinkLog()
-    {
-        blinkLoggingActive = false;
-        blinkHelper.OnBlink.RemoveListener(HandleBlinkLogged);
-        Debug.Log("StopRecordBlinkLog");
-    }
 
 
     private void HandleBlinkLogged(BlinkHelper.BlinkEventArgs args)
     {
         Debug.Log($"Blink detected: duration = {args.EyesClosedTime * 1000f} ms");
+        Debug.Log($"blinkLoggingActive status: {blinkLoggingActive}");
         if (!blinkLoggingActive) return;  
         string blinkTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
         float durationMs = args.EyesClosedTime * 1000f;
