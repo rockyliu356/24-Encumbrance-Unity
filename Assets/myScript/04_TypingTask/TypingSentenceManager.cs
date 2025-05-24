@@ -12,7 +12,7 @@ public class TypingSentenceManager : MonoBehaviour
     public GameObject canvas;
     public GameObject startButton;
     public int index = 1;
-    public int count = 5;
+    public int count = 3;
     private List<string> sentences = new List<string>();
 
     public List<string> allSentences = new List<string>() {
